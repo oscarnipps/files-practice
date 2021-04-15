@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/entryFragment">
 
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.example.files_practice.EntryFragment"
+        android:label="fragment_entry"
+        tools:layout="@layout/fragment_entry">
+
+        <action
+            android:id="@+id/navigate_to_images"
+            app:destination="@id/imagesFragment" />
+
+        <action
+            android:id="@+id/navigate_to_documents"
+            app:destination="@id/documentFragment" />
+
+        <action
+            android:id="@+id/navigate_to_videos"
+            app:destination="@id/videoFragment" />
+
+        <action
+            android:id="@+id/navigate_to_audio"
+            app:destination="@id/audioFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.example.files_practice.images.ImagesFragment"
+        android:label="fragment_images"
+        tools:layout="@layout/fragment_images" />
+    <fragment
+        android:id="@+id/documentFragment"
+        android:name="com.example.files_practice.documents.DocumentFragment"
+        android:label="fragment_document"
+        tools:layout="@layout/fragment_document" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.files_practice.videos.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.example.files_practice.audio.AudioFragment"
+        android:label="fragment_audio"
+        tools:layout="@layout/fragment_audio" />
 </navigation>
